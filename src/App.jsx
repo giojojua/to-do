@@ -1,20 +1,18 @@
 import './App.css';
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import Main from "./Main";
+import ThemeButton from "./ThemeButton";
+import Search from "./Search";
+import ToDo from "./ToDo";
+import AddToDo from "./AddToDo";
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <Navbar/>
-            </header>
-            <section className="Container">
-                <Main/>
-            </section>
-            <footer className="App-footer">
-                <Footer/>
-            </footer>
+            <div className="container">
+                <ThemeButton/>
+                <Search/>
+                <ToDo/>
+                <AddToDo/>
+            </div>
         </div>
     );
 }
