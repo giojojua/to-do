@@ -1,13 +1,12 @@
-import Database from './Database.json';
+import { FaTrash } from 'react-icons/fa';
+import Database from './Database';
 
 export default function ToDoList() {
 
-    let toDos = Database
-
     let toDoName = []
 
-    Object.entries(toDos).map(([key]) => {
-        toDoName.push(key)
+    Object.entries(Database).map(([key, value]) => {
+        toDoName.push(value.text)
         return toDoName
     })
 
@@ -16,7 +15,7 @@ export default function ToDoList() {
             <span><input className='checkbox' type="checkbox"/>{index}</span>
             <div className='todo-status'>
                 <button className='bg-green'>!</button>
-                <button>Delete</button>
+                <button><FaTrash/></button>
             </div>
         </li>
     )

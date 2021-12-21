@@ -100,11 +100,20 @@ header {
     margin-right: 15px;
 }
 
+.todo-status {
+    display: flex;
+}
+
 .todo-status button {
+    min-height: 35px;
+    min-width: 35px;
     margin-right: 15px;
     padding: 5px 10px;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .add-todo {
