@@ -6,7 +6,9 @@ export default function ToDo() {
             <div className='task-table'>
                 <h1>TO-DO</h1>
                 <div>
-                    <ToDoList/>
+                    <ul>
+                        <ToDoList/>
+                    </ul>
                 </div>
             </div>
         </section>
