@@ -7,18 +7,18 @@ export default function AddToDo() {
     const onButtonClick = () => {
         inputAdd.current.focus();
 
-        let newObject = Object.create({
-            text: inputAdd.current.value,
-            active: true,
-            important: false,
-            deleted: false
-        })
+        let newObject = Object.create({})
+
+        newObject.text = inputAdd.current.value
+        newObject.active = true
+        newObject.important = false
+        newObject.deleted = false
 
         Database.push(newObject)
         console.log(Database)
     };
 
-    return  (
+    return (
         <section className='w-100'>
             <form className='add-todo'>
                 <input ref={inputAdd} type="text" placeholder='Add To-Do'/>
